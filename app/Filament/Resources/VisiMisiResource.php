@@ -43,7 +43,7 @@ class VisiMisiResource extends Resource
                     ->schema([
                         Grid::make(2)
                             ->schema([
-                                RichEditor::make('visi')
+                                Textarea::make('visi')
                                     ->label('Visi')
                                     ->required()
                                     ->columnSpan(1),
