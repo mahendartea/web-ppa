@@ -47,15 +47,19 @@ class VisiMisiResource extends Resource
                                     ->label('Visi')
                                     ->required()
                                     ->columnSpan(1),
-                                RichEditor::make('misi')
-                                    ->label('Misi')
+                                    RichEditor::make('misi')
+                                    ->label('Misi (Harus buat list)')
                                     ->required()
                                     ->columnSpan(1),
+                                ]),
+                        Grid::make(1)
+                            ->schema([
+                                RichEditor::make('sejarah')->label('Sejarah')->columnSpan(1),
                             ]),
                         Grid::make(2)
                             ->schema([
                                 RichEditor::make('tujuan')
-                                    ->label('Tujuan')
+                                    ->label('Tujuan (Harus buat list)')
                                     ->required()
                                     ->columnSpan(1),
                                 RichEditor::make('slogan')->label('Slogan')->columnSpan(1),

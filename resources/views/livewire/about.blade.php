@@ -26,41 +26,10 @@
                         </div>
                     </div>
                 </div>
-                <p class="md:w-2/3 max-w-8xl mx-auto text-justify text-gray-500 dark:text-gray-300">
-                    <span class="text-[#040181] font-bold">Partai Perjuangan Aceh (PPA)</span> didirikan dengan latar
-                    belakang kesadaran mendalam bahwa
-                    Aceh memiliki potensi besar dan beragam untuk menjadi daerah yang maju dan sejahtera.
-                    Keinginan untuk menciptakan perubahan yang nyata dan memperjuangkan hak-hak
-                    masyarakat, khususnya kaum perempuan, mendorong terbentuknya partai ini.
-                    <span class="text-[#040181] font-bold">Partai Perjuangan Aceh (PPA)</span> didirikan pada tahun 2024
-                    oleh
-                    <span class="font-bold">Ibu Prof Adjunct Dr, Marniati,
-                        SE, M.Kes</span> dan <span class="font-bold">Bapak Dedi Zefrizal, ST .</span>, selaku tokoh
-                    pendidikan dan pengusaha Aceh.
-                    <span class="text-[#040181] font-bold">Partai Perjuangan Aceh</span> juga bercita-cita tidak hanya
-                    melindungi masyarakat Aceh, namun
-                    juga budaya Aceh sebagai budaya nasional.
-                    Cikal bakal partai ini muncul saat Pilkada Serentak 2024, ketika Prof. Adjunct Dr. Marniati,
-                    SE, M.Kes, mencalonkan diri sebagai calon Wakil Gubernur Aceh. Kendati tidak terpilih
-                    meskipun beliau mengikuti seluruh proses dan ketentuan, pengalaman tersebut
-                    memunculkan kesadaran akan perlunya wadah politik yang benar-benar mewakili aspirasi
-                    rakyat Aceh dan mendukung kemajuan perempuan dalam kepemimpinan.
-                    Prof. Adjunct Dr. Marniati, SE, M.Kes, memandang hal ini sebagai ancaman bagi masa
-                    depan perempuan Aceh untuk maju sebagai pemimpin, mengingat sejarah perempuan
-                    pejuang seperti Cut Nyak Dhien dan tokoh-tokoh lainnya yang telah berkontribusi besar bagi
-                    Aceh.
-                    Situasi ini mendorong Prof. Adjunct Marniati dan bapak Dedi Zefrizal bersama sejumlah
-                    tokoh besar Aceh, termasuk akademisi, pengusaha dan kelompok media, untuk membentuk
-                    partai politik baru bernama <span class="text-[#040181] font-bold">Partai Perjuangan Aceh</span>.
-                    Pada
-                    tanggal 20 Agustus 2024, rapat
-                    pertama digelar di ruang rapat Universitas Ubudiyah Indonesia. <span
-                        class="text-[#040181] font-bold">Partai Perjuangan Aceh</span> lahir
-                    dengan semangat untuk membawa Aceh ke arah yang lebih baik. Setelah melalui proses
-                    pengesahan dan verifikasi oleh Kemenkumham Provinsi Aceh pada Oktober 2024, <span
-                        class="text-[#040181] font-bold">Partai
-                        Perjuangan Aceh</span> secara resmi lahir
-                </p>
+                <span class="md:w-2/3 max-w-8xl mx-auto text-justify text-gray-500 dark:text-gray-300">
+                    <span class="text-2xl font-semibold text-[#040181] dark:text-white">Sejarah Partai Perjuangan
+                        Aceh</span> {!! $sejarah !!}
+                </span>
             </div>
         </div>
     </section>

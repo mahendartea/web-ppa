@@ -11,6 +11,7 @@ class About extends Component
     public $misi;
     public $misiItems;
     public $tujuan;
+    public $sejarah;
 
     public function mount()
     {
@@ -19,6 +20,7 @@ class About extends Component
         $this->misi = $data->misi;
         $this->misiItems = $this->parseMisiToArray($data->misi); // Ubah ke array
         $this->tujuan = $this->parseMisiToArray($data->tujuan);
+        $this->sejarah = $data->sejarah;
     }
     
     /**
