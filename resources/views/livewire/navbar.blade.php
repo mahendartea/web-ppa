@@ -3,7 +3,7 @@
     <div class="lg:max-w-screen-2xl max-h-16 flex flex-wrap items-center justify-between mx-auto bg-[#faec04] mb-5">
         <a href="/"
             class="md:flex md:items-center md:space-x-3 md:space-y-0 space-y-2 rtl:space-x-reverse md:ml-0 ml-4 z-30">
-            <img src="/assets/img/logobiru.jpeg" class="h-28 md:h-32 bg-transparent no-border rounded-b-xl"
+            <img src="/assets/img/logopartaipres.png" class="h-28 md:h-32 bg-transparent no-border rounded-b-xl"
                 alt="PPA
             Logo">
             <span

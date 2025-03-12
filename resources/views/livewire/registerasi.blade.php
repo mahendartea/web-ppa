@@ -327,9 +327,14 @@
                                 <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Wilayah DPD
                                     Provinsi <sup> * </sup></span>
                             </label>
-                            <input type="text" id="provinsi" wire:model.lazy="provinsi"
-                                class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            <select id="provinsi" wire:model.lazy="provinsi"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required>
+                                <option value="">Pilih Provinsi</option>
+                                @foreach($dataprov as $province)
+                                    <option value="{{ $province->id }}">{{ $province->name }}</option>
+                                @endforeach
+                            </select>
                             @error('provinsi')
                                 <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
                             @enderror
@@ -339,8 +344,13 @@
                             <label for="kotakab"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Wilayah DPD Kabupaten/Kota <sup> * </sup></label>
-                            <input type="text" id="kotakab" wire:model.lazy="kotakab"
-                                class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                            <select id="kotakab" wire:model.lazy="kotakab" {{ empty($regencies) ? 'disabled' : '' }}
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="">Pilih Kabupaten/Kota</option>
+                                @foreach($regencies as $regency)
+                                    <option value="{{ $regency->name }}">{{ $regency->name }}</option>
+                                @endforeach
+                            </select>
                             @error('kotakab')
                                 <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
                             @enderror
@@ -350,8 +360,13 @@
                             <label for="kecamatan"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Wilayah DPD Kecamatan <sup> * </sup></label>
-                            <input type="text" id="kecamatan" wire:model.lazy="kecamatan"
-                                class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                            <select id="kecamatan" wire:model.lazy="kecamatan" {{ empty($districts) ? 'disabled' : '' }}
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="">Pilih Kecamatan</option>
+                                @foreach($districts as $district)
+                                    <option value="{{ $district->name }}">{{ $district->name }}</option>
+                                @endforeach
+                            </select>
                             @error('kecamatan')
                                 <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
                             @enderror
@@ -361,8 +376,13 @@
                             <label for="desa"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 Wilayah DPD Desa <sup> * </sup></label>
-                            <input type="text" id="desa" wire:model.lazy="desa"
-                                class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                            <select id="desa" wire:model.lazy="desa" {{ empty($villages) ? 'disabled' : '' }}
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="">Pilih Desa</option>
+                                @foreach($villages as $village)
+                                    <option value="{{ $village->name }}">{{ $village->name }}</option>
+                                @endforeach
+                            </select>
                             @error('desa')
                                 <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
                             @enderror

@@ -60,15 +60,44 @@
                         </span>
 
                         <div class="mt-4 md:mx-4 md:mt-0">
-                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Program dan
-                                Agenda Partai</h1>
+                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Program Unggulan Partai</h1>
 
-                            <p class="mt-3 text-gray-500 dark:text-gray-300">
-                                Program-program utama dan kebijakan yang diperjuangkan partai.
-                                Agenda kerja jangka pendek, menengah, dan panjang.
-                                Usulan dan pandangan partai terhadap isu-isu lokal maupun nasional yang relevan untuk
-                                Aceh.
-                            </p>
+                            <ul class="mt-3 list-disc list-inside text-gray-500 dark:text-gray-300">
+                                <li class="font-bold">Bidang Pendidikan dan Pengembangan SDM:</li>
+                                <ul class="ml-6 list-disc list-inside">
+                                    <li>Beasiswa untuk pelajar dan mahasiswa berprestasi</li>
+                                    <li>Pelatihan keterampilan dan kewirausahaan</li>
+                                    <li>Pengembangan pusat riset dan inovasi</li>
+                                </ul>
+
+                                <li class="font-bold">Bidang Ekonomi dan Ketenagakerjaan:</li>
+                                <ul class="ml-6 list-disc list-inside">
+                                    <li>Pemberdayaan UMKM lokal</li>
+                                    <li>Pengembangan sektor pariwisata berbasis kearifan lokal</li>
+                                    <li>Program magang dan pelatihan kerja</li>
+                                </ul>
+
+                                <li class="font-bold">Bidang Kesejahteraan Sosial</li>
+                                <ul class="ml-6 list-disc list-inside">
+                                    <li>Program pemberantasan kemiskinan terpadu</li>
+                                    <li>Peningkatan layanan kesehatan dan gizi untuk mengatasi stunting</li>
+                                    <li>Rehabilitasi dan pencegahan penyalahgunaan narkoba</li>
+                                </ul>
+
+                                <li class="font-bold">Perlindungan Minoritas:</li>
+                                <ul class="ml-6 list-disc list-inside">
+                                    <li>Jaminan kebebasan beragama dan beribadah</li>
+                                    <li>Perlindungan hukum bagi kelompok rentan</li>
+                                    <li>Program pemberdayaan ekonomi bagi kelompok minoritas</li>
+                                </ul>
+
+                                <li class="font-bold">Pelestarian Budaya:</li>
+                                <ul class="ml-6 list-disc list-inside">
+                                    <li>Revitalisasi nilai-nilai adat dan budaya Aceh</li>
+                                    <li>Pengembangan seni dan sastra lokal</li>
+                                    <li>Promosi wisata budaya</li>
+                                </ul>
+                            </ul>
                         </div>
                     </div>
 

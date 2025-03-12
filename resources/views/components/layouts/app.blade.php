@@ -50,11 +50,11 @@
 
     <footer class="bg-[#040181] dark:bg-gray-900 text-white pt-16 pattern">
         <div class="container p-6 mx-auto md:flex md:justify-center">
-            <div class="w-full md:w-2/3 -mx-6 md:mx-0">
+            <div class="w-full md:w-1/3 -mx-6 md:mx-0">
                 <div class="px-6 md:px-0 text-center sm:text-left">
                     <a href="#" class="my-5 block sm:inline-block">
-                        <img class="w-auto h-32 mx-auto sm:mx-0" src="/assets/img/logoppa.png" alt="">
-                        <p class="text-[#faec04]">Parta Perjuangan Aceh</p>
+                        <img class="w-auto h-32 mx-auto sm:mx-0" src="/assets/img/logopartaipres.png" alt="">
+                        <p class="text-[#faec04]">Partai Perjuangan Aceh</p>
                     </a>
 
                     <p class="max-w-sm mt-2 mx-auto sm:mx-0 dark:text-gray-400">Membangun Kembali Masyarakat Aceh Maju
@@ -63,8 +63,8 @@
                 </div>
             </div>
 
-            <div class="mt-6 md:mt-0 md:flex-1">
-                <div class="grid grid-cols-1 gap-0 md:gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-6 md:mt-0 md:flex-1 w-2/3">
+                <div class="grid grid-cols-1 gap-0 md:gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     <div>
                         <h3 class=" uppercase dark:text-white">Tentang</h3>
                         <a href="#" class="block mt-2 text-sm  dark:text-gray-400 hover:underline">Informasi
@@ -84,8 +84,8 @@
 
                     <div>
                         <h3 class=" uppercase dark:text-white">Contact</h3>
-                        <span class="block mt-2 text-sm  dark:text-gray-400 hover:underline">+62 123 456 789</span>
-                        <span class="block mt-2 text-sm  dark:text-gray-400 hover:underline">ppa@email.com</span>
+                        <span class="block mt-2 text-sm  dark:text-gray-400 hover:underline"> 082173082250</span>
+                        <span class="block mt-2 text-sm  dark:text-gray-400 hover:underline">partaiperjuanganacehppa@gmail.com</span>
                     </div>
                 </div>
             </div>
