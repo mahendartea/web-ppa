@@ -3,12 +3,39 @@
 namespace App\Filament\Resources\MemberResource\Pages;
 
 use App\Filament\Resources\MemberResource;
+use App\Filament\Resources\MemberResource\Actions\DownloadPdf;
 use Filament\Resources\Pages\ViewRecord;
 use Filament\Infolists\Infolist;
+use Filament\Actions;
 
 class ViewMember extends ViewRecord
 {
     protected static string $resource = MemberResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\Action::make('download_pdf')
+                ->label('Download PDF')
+                ->icon('heroicon-o-document-arrow-down')
+                ->color('success')
+                ->action(function () {
+                    $record = $this->getRecord();
+                    $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.member', ['member' => $record])
+                        ->setPaper('a4')
+                        ->setOption('isRemoteEnabled', true)
+                        ->setOption('isHtml5ParserEnabled', true);
+
+                    // Generate a clean filename
+                    $cleanName = preg_replace('/[^A-Za-z0-9\\-]/', '-', $record->name);
+                    $filename = "pendaftaran-{$cleanName}.pdf";
+
+                    return response()->streamDownload(function () use ($pdf) {
+                        echo $pdf->output();
+                    }, $filename);
+                }),
+        ];
+    }
 
     public function infolist(Infolist $infolist): Infolist
     {

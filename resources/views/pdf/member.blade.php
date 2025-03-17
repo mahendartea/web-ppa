@@ -14,6 +14,16 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo img {
+            max-height: 80px;
+            display: inline-block;
+        }
 
         .section {
             margin-bottom: 20px;
@@ -62,17 +72,40 @@
 
 <body>
     <div class="header">
+        <div class="logo">
+            <img src="{{ public_path('assets/img/logoppa.png') }}" alt="Logo PPA" style="max-height: 80px; margin-bottom: 10px;">
+        </div>
         <h1>Data Anggota</h1>
         <p>{{ date('d/m/Y') }}</p>
     </div>
 
     <div class="section">
         <div class="section-title">Dokumen</div>
-        <div class="image-container">
-            @if ($member->foto)
-                <img src="{{ public_path('storage/' . $member->foto) }}" alt="Foto">
-            @endif
+        
+        <div style="display: table; width: 100%;">
+            <div style="display: table-cell; width: 50%; vertical-align: top; padding-right: 10px;">
+                <div class="section-title" style="background-color: #e8e8e8; font-size: 14px; margin-bottom: 10px;">Foto Anggota</div>
+                <div class="image-container" style="text-align: center;">
+                    @if ($member->foto)
+                        <img src="{{ public_path('storage/' . $member->foto) }}" alt="Foto" style="max-width: 150px; max-height: 200px;">
+                    @else
+                        <p>Foto tidak tersedia</p>
+                    @endif
+                </div>
+            </div>
+            
+            <div style="display: table-cell; width: 50%; vertical-align: top; padding-left: 10px;">
+                <div class="section-title" style="background-color: #e8e8e8; font-size: 14px; margin-bottom: 10px;">Foto KTP</div>
+                <div class="image-container" style="text-align: center;">
+                    @if ($member->ktp)
+                        <img src="{{ public_path('storage/' . $member->ktp) }}" alt="KTP" style="max-width: 300px; max-height: 200px;">
+                    @else
+                        <p>Foto KTP tidak tersedia</p>
+                    @endif
+                </div>
+            </div>
         </div>
+        
         <div class="grid">
             <div class="grid-item">
                 <div class="label">Konfirmasi Alamat KTP:</div>
