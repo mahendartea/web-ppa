@@ -32,6 +32,7 @@ class Registerasi extends Component
     public $kecamatan;
     public $desa;
     public $pekerjaan;
+    public $provinceName;
 
     // Properties for select options
     public $regencies = [];
@@ -89,7 +90,7 @@ class Registerasi extends Component
             'social_media_link' => $this->social_media_link,
             'level_pengurusan' => $this->level_pengurusan,
             'jabatan' => $this->jabatan,
-            'provinsi' => $this->provinsi,
+            'provinsi' => $this->provinceName,
             'kotakab' => $this->kotakab,
             'kecamatan' => $this->kecamatan,
             'desa' => $this->desa,
@@ -128,19 +129,21 @@ class Registerasi extends Component
 
         // Store the province ID directly
         $this->provinceId = $value;
-        
+
         // Get the province name for display
         $client = new \GuzzleHttp\Client();
         $response = $client->request('GET', 'https://emsifa.github.io/api-wilayah-indonesia/api/province/' . $this->provinceId . '.json');
         $province = json_decode($response->getBody()->getContents());
-        
+        $this->provinceName = $province->name;
+
+
         // We don't need to update $this->provinsi here since we're using the ID directly
         // This was causing the select to revert to default option
 
         // Load regencies for the selected province
         $response = $client->request('GET', 'https://emsifa.github.io/api-wilayah-indonesia/api/regencies/' . $this->provinceId . '.json');
         $this->regencies = json_decode($response->getBody()->getContents());
-        
+
         // Log for debugging
         Log::info('Regencies loaded for province ID: ' . $this->provinceId, [
             'count' => count($this->regencies),
@@ -176,7 +179,7 @@ class Registerasi extends Component
                 $client = new \GuzzleHttp\Client();
                 $response = $client->request('GET', 'https://emsifa.github.io/api-wilayah-indonesia/api/districts/' . $this->regencyId . '.json');
                 $this->districts = json_decode($response->getBody()->getContents());
-                
+
                 // Log for debugging
                 Log::info('Districts loaded for regency ID: ' . $this->regencyId, [
                     'count' => count($this->districts),
@@ -212,7 +215,7 @@ class Registerasi extends Component
                 $client = new \GuzzleHttp\Client();
                 $response = $client->request('GET', 'https://emsifa.github.io/api-wilayah-indonesia/api/villages/' . $this->districtId . '.json');
                 $this->villages = json_decode($response->getBody()->getContents());
-                
+
                 // Log for debugging
                 Log::info('Villages loaded for district ID: ' . $this->districtId, [
                     'count' => count($this->villages),
@@ -227,9 +230,9 @@ class Registerasi extends Component
         if (empty($value)) {
             return;
         }
-        
+
         // We don't need to set $this->desa = $value here as it's already set by Livewire
-        
+
         // Find the village ID by name if needed for future use
         if ($this->villages && count($this->villages) > 0) {
             foreach ($this->villages as $village) {
@@ -238,14 +241,14 @@ class Registerasi extends Component
                     break;
                 }
             }
-            
+
             // Log for debugging
             if ($this->villageId) {
                 Log::info('Village selected: ' . $value . ' with ID: ' . $this->villageId);
             }
         }
     }
-    
+
     public function render()
     {
         $client = new \GuzzleHttp\Client();
