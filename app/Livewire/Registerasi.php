@@ -33,6 +33,8 @@ class Registerasi extends Component
     public $desa;
     public $pekerjaan;
     public $provinceName;
+    public $email;
+    public $telp;
 
     // Properties for select options
     public $regencies = [];
@@ -70,6 +72,8 @@ class Registerasi extends Component
             'kecamatan' => 'nullable|string|max:255',
             'desa' => 'nullable|string|max:255',
             'pekerjaan' => 'nullable|string|max:255',
+            'telp' => 'nullable|numeric|digits_between:10,15',
+            'email' => 'required|email',
         ]);
 
 
@@ -95,6 +99,8 @@ class Registerasi extends Component
             'kecamatan' => $this->kecamatan,
             'desa' => $this->desa,
             'pekerjaan' => $this->pekerjaan,
+            'email' => $this->email,
+            'telp' => $this->telp,
         ]);
 
         if ($this->photo) {

@@ -92,6 +92,11 @@ class MemberResource extends Resource
                         Forms\Components\TextInput::make('last_education')
                             ->label('Pendidikan Terakhir')
                             ->maxLength(255),
+                        Forms\Components\TextInput::make('telp')
+                            ->label('No HP')
+                            ->numeric()
+                            ->minLength(10)
+                            ->maxLength(15),
                         Forms\Components\Select::make('pekerjaan')
                             ->label('Pekerjaan')
                             ->options([
@@ -177,6 +182,10 @@ class MemberResource extends Resource
                     ->searchable(),
                 TextColumn::make('nickname')
                     ->label('Nama Panggilan')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('telp')
+                    ->label('No HP')
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('kta_new')
@@ -402,6 +411,8 @@ class MemberResource extends Resource
                                     ->heading('Pendidikan Terakhir'),
                                 Column::make('pekerjaan')
                                     ->heading('Pekerjaan'),
+                                Column::make('telp')
+                                    ->heading('No HP'),
                                 Column::make('recomend_name')
                                     ->heading('Nama Rekomendasi'),
                                 Column::make('recomend_jabatan')
@@ -416,6 +427,8 @@ class MemberResource extends Resource
                                     ->heading('Level Pengurusan'),
                                 Column::make('jabatan')
                                     ->heading('Jabatan'),
+                                Column::make('telp')
+                                    ->heading('No HP'),
                                 Column::make('provinsi')
                                     ->heading('Provinsi'),
                                 Column::make('kotakab')
